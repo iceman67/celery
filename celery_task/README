@@ -1,0 +1,33 @@
+source ~/.bashrc
+sudo rabbitmq-server
+
+$ ipfs daemon
+Initializing daemon...
+go-ipfs version: 0.4.23-
+Repo version: 7
+System version: amd64/darwin
+Golang version: go1.13.7
+Swarm listening on /ip4/127.0.0.1/tcp/4001
+Swarm listening on /ip4/192.168.0.8/tcp/4001
+Swarm listening on /ip6/::1/tcp/4001
+Swarm listening on /p2p-circuit
+Swarm announcing /ip4/1.247.66.125/tcp/4001
+Swarm announcing /ip4/127.0.0.1/tcp/4001
+Swarm announcing /ip4/192.168.0.8/tcp/4001
+Swarm announcing /ip6/::1/tcp/4001
+API server listening on /ip4/127.0.0.1/tcp/5001
+WebUI: http://127.0.0.1:5001/webui
+Gateway (readonly) server listening on /ip4/127.0.0.1/tcp/8080
+Daemon is ready
+
+
+$ redis-cli
+127.0.0.1:6379> GET alice
+"QmYezjSSrsVvXLT6nt4eECgRgtLwPmZp6PmsRZcCZRKaTy"
+127.0.0.1:6379> DEL alice
+(integer) 1
+127.0.0.1:6379> GET alice
+(nil)
+127.0.0.1:6379> GET alice
+"QmYezjSSrsVvXLT6nt4eECgRgtLwPmZp6PmsRZcCZRKaTy"
+
